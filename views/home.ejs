@@ -1,0 +1,84 @@
+<%- include('partials/header') -%>
+<style>
+  body {
+    overflow-x: hidden;
+  }
+  .me-5 {
+    margin-right: -3rem !important;
+  }
+  .uk-card-body {
+    padding: 18px 16px;
+  }
+  .col-3 {
+    flex: 0 0 auto;
+    width: 23%;
+  }
+</style>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<body>
+  <%- include('sidebar') -%>
+  <div class="container me-5">
+    <div class="row">
+      <% for (let index = 0; index < 14; index++) { %>
+      <div class="col-3">
+        <!-- <div class="uk-text-center">
+        <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img src="images/dark.jpg" alt="">
+            <img class="uk-transition-scale-up uk-position-cover" src="images/light.jpg" alt="">
+        </div>
+        <p class="uk-margin-small-top">2 Images</p>
+    </div> -->
+        <div class="uk-card uk-card-default uk-card-hover">
+          <div class="uk-card-badge uk-label">New</div>
+          <!-- <div class="uk-card-media-top uk-flex uk-flex-center" >
+            <img height="50%" width="100%"
+              src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+              alt=""
+            />
+          </div> -->
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img
+              src="https://picsum.photos/300/200?random=<%=index%>"
+              alt=""
+            />
+            <img
+              class="uk-transition-scale-up uk-position-cover"
+              src="https://picsum.photos/300/200?random=<%=index+100%>"
+              alt=""
+            />
+                        <div uk-tooltip="Add to Wishlist" class="uk-position-center">
+                            <i style="color:rgba(230, 25, 145, 0.658)" class="uk-transition-fade fas fa-heart fa-4x"></i>
+            </div>
+          </div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Media Top</h3>
+            <p>Lorem ipsum dolor ...</p>
+          </div>
+        </div>
+        <br />
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <nav style="
+    margin-left: 40%; " aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</body>
+<%- include('partials/footer') -%>
